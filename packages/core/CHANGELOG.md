@@ -1,5 +1,21 @@
 # @workflow/core
 
+## 5.0.1
+
+### Patch Changes
+
+- [#4531](https://github.com/vercel/workflow/pull/4531) [`14dbfdc`](https://github.com/vercel/workflow/commit/14dbfdc1f52e838854b6ee70398b742e4850e891) Thanks [@alangenfeld](https://github.com/alangenfeld)! - Dynamic `start()` refusals (opt-in, validation, same-deployment, World capability, execution-context budget) are now fatal, so a `start()` inside a step fails fast instead of retrying.
+
+- [#4530](https://github.com/vercel/workflow/pull/4530) [`1fcf4bb`](https://github.com/vercel/workflow/commit/1fcf4bb33964e491ebefefbcd0644fe46e8dd1f4) Thanks [@alangenfeld](https://github.com/alangenfeld)! - Dynamic `start()` now publishes the run only after `run_created` confirms its code was stored, so a refused or failed create can no longer leave an executing run behind.
+
+- [#4328](https://github.com/vercel/workflow/pull/4328) [`0e64f7b`](https://github.com/vercel/workflow/commit/0e64f7bc25b9159a39485c5ff5b2c8025bf2745a) Thanks [@VaguelySerious](https://github.com/VaguelySerious)! - Stop re-executing a running lazy or pre-claimed inline step when its message is redelivered.
+
+- [#4551](https://github.com/vercel/workflow/pull/4551) [`e915eab`](https://github.com/vercel/workflow/commit/e915eab3ea98d300e6431ad005c766c90b81695c) Thanks [@VaguelySerious](https://github.com/VaguelySerious)! - Fix `nuxt dev` and other Nitro v2 dev servers failing with a Rollup "already an existing non-external module id" error, and with "Workflow world runtime was not initialized" after it.
+
+- [#4549](https://github.com/vercel/workflow/pull/4549) [`98442de`](https://github.com/vercel/workflow/commit/98442dea24a392c29adcf843ef1a65c1ed94f32c) Thanks [@VaguelySerious](https://github.com/VaguelySerious)! - Errors with a read-only `stack`, such as postgres.js query errors, are now reported as thrown instead of being replaced by `Cannot assign to read only property 'stack'`.
+- Updated dependencies [[`7fb0575`](https://github.com/vercel/workflow/commit/7fb057520d97ef32a9e3b717efd51e594924f964), [`0648d16`](https://github.com/vercel/workflow/commit/0648d1684cbc86482c8c43de60b975cffc745185)]:
+  - @workflow/world-vercel@5.0.1
+
 ## 5.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # @workflow/world-vercel
 
+## 5.0.1
+
+### Patch Changes
+
+- [#4504](https://github.com/vercel/workflow/pull/4504) [`7fb0575`](https://github.com/vercel/workflow/commit/7fb057520d97ef32a9e3b717efd51e594924f964) Thanks [@shalabhc](https://github.com/shalabhc)! - The WebSocket events transport now limits the size of each message. Any frame over `WORKFLOW_WS_MAX_MESSAGE_BYTES` (default 12 MiB, at most 16 MiB) is sent as several messages and rebuilt by the receiver. The client offers `frame-parts` in the `x-workflow-ws-flags` upgrade header so the backend can split large replies too.
+
+- [#4381](https://github.com/vercel/workflow/pull/4381) [`0648d16`](https://github.com/vercel/workflow/commit/0648d1684cbc86482c8c43de60b975cffc745185) Thanks [@alangenfeld](https://github.com/alangenfeld)! - Retry throttled (429) stream WebSocket writes and closes after `Retry-After`, moving to HTTP when the socket closes or the wait budget runs out, and retry a close 5xx over HTTP instead of failing the writer.
+
 ## 5.0.0
 
 ### Major Changes

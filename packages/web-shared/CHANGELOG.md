@@ -1,5 +1,12 @@
 # @workflow/web-shared
 
+## 5.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`14dbfdc`](https://github.com/vercel/workflow/commit/14dbfdc1f52e838854b6ee70398b742e4850e891), [`1fcf4bb`](https://github.com/vercel/workflow/commit/1fcf4bb33964e491ebefefbcd0644fe46e8dd1f4), [`0e64f7b`](https://github.com/vercel/workflow/commit/0e64f7bc25b9159a39485c5ff5b2c8025bf2745a), [`e915eab`](https://github.com/vercel/workflow/commit/e915eab3ea98d300e6431ad005c766c90b81695c), [`98442de`](https://github.com/vercel/workflow/commit/98442dea24a392c29adcf843ef1a65c1ed94f32c)]:
+  - @workflow/core@5.0.1
+
 ## 5.0.0
 
 ### Major Changes
